@@ -9,6 +9,13 @@ const router = express()
 const bodyParser = require('body-parser');
 var fs = require('fs');
 
+var date = new Date();
+  
+const lastMonthTooVote = 11;
+const lastDayTooVote = 10;
+const lastHourTooVote = 10;
+const lastMinTooVote = 10;
+
 const dataPathVotes = "./data/votes.json";
 router.get('/tester', function(req, res, next) {
 	res.send("It Works");
@@ -48,13 +55,6 @@ router.get('/vote', function(req,res, next) {
 		/*res.send(JSON.parse(data));
 		next();*/
 
-		var date = new Date();
-  
-		const lastMonthTooVote = 11;
-		const lastDayTooVote = 10;
-		const lastHourTooVote = 10;
-		const lastMinTooVote = 10;
-
 		if(date.getMonth() + 1 >= lastMonthTooVote && date.getDate() >= lastDayTooVote && date.getHours() >= lastHourTooVote && date.getMinutes() > lastMinTooVote) {
 			console.log("Voting time is over; winner is:");
 			const sort_by = (field, reverse, primer) => {
@@ -89,13 +89,6 @@ router.get('/vote/:id', function(req,res, next) {
 		if (err) {
 			throw err;
 		}
-			
-		var date = new Date();
-  
-		const lastMonthTooVote = 11;
-		const lastDayTooVote = 10;
-		const lastHourTooVote = 10;
-		const lastMinTooVote = 10;
 
 		if(date.getMonth() + 1 >= lastMonthTooVote && date.getDate() >= lastDayTooVote && date.getHours() >= lastHourTooVote && date.getMinutes() > lastMinTooVote) {
 			console.log("Voteing time have expired");
