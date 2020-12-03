@@ -1,0 +1,25 @@
+{
+  "name": "nobeldata",
+  "version": "1.0.0",
+  "description": "Voting on the nominees",
+  "main": "voteAPI.js",
+  "scripts": {
+    "start": "node voteAPI.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/m4xen/NobelVotinAPI"
+  },
+  "author": "Viktorx64, M4xen, OscaHar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/m4xen/NobelVotinAPI"
+  },
+  "homepage": "https://github.com/m4xen/NobelVotinAPI",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  }
+}

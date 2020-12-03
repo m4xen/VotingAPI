@@ -1,0 +1,42 @@
+[
+    {
+        "name": "Grace Hopper",
+        "votes": 0,
+        "id": 0
+    },
+    {
+        "name": "John Backus",
+        "votes": 0,
+        "id": 1
+    },
+    {
+        "name": "Margaret Hamilton",
+        "votes": 0,
+        "id": 2
+    },
+    {
+        "name": "Steve Jobs",
+        "votes": 0,
+        "id": 3
+    },
+    {
+        "name": "Alan Turing ",
+        "votes": 0,
+        "id": 4
+    },
+    {
+        "name": "Kathleen Booth",
+        "votes": 0,
+        "id": 5
+    },
+    {
+        "name": "Richard Stallman",
+        "votes": 0,
+        "id": 6
+    },
+    {
+        "name": "Ada Lovelace",
+        "votes": 0,
+        "id": 7
+    }
+]
