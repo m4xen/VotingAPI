@@ -9,13 +9,6 @@ const router = express()
 const bodyParser = require('body-parser');
 var fs = require('fs');
 
-var date = new Date();
-  
-const lastMonthTooVote = 11;
-const lastDayTooVote = 10;
-const lastHourTooVote = 10;
-const lastMinTooVote = 10;
-
 const dataPathVotes = "./data/votes.json";
 router.get('/tester', function(req, res, next) {
 	res.send("It Works");
@@ -45,41 +38,6 @@ router.get('/vote', function(req,res, next) {
 	});
 });
 
-//get poll winner
-router.get('/vote', function(req,res, next) {
-	fs.readFile(dataPathVotes, (err, data) => {
-		if (err) {
-			throw err;
-		}
-		var nobleList = JSON.parse(data);
-		/*res.send(JSON.parse(data));
-		next();*/
-
-		if(date.getMonth() + 1 >= lastMonthTooVote && date.getDate() >= lastDayTooVote && date.getHours() >= lastHourTooVote && date.getMinutes() > lastMinTooVote) {
-			console.log("Voting time is over; winner is:");
-			const sort_by = (field, reverse, primer) => {
-
-				const key = primer ?
-				  function(x) {
-					return primer(x[field])
-				  } :
-				  function(x) {
-					return x[field]
-				  };
-			  
-				reverse = !reverse ? 1 : -1;
-			  
-				return function(a, b) {
-				  return a = key(a), b = key(b), reverse * ((a > b) - (b > a));
-				}
-			  }
-			  nobleList.sort(sort_by('votes', true, parseInt));
-			  console.log(nobleList[0].name + " " + nobleList[0].votes);
-			  nobleList.sort(sort_by('id', false, parseInt));
-		}
-	});
-});
-
 //save Votes
 router.get('/vote/:id', function(req,res, next) {
 	res.setHeader('Access-Control-Allow-Origin', '*');
@@ -88,12 +46,6 @@ router.get('/vote/:id', function(req,res, next) {
 	fs.readFile(dataPathVotes, (err, data) => {
 		if (err) {
 			throw err;
-		}
-
-		if(date.getMonth() + 1 >= lastMonthTooVote && date.getDate() >= lastDayTooVote && date.getHours() >= lastHourTooVote && date.getMinutes() > lastMinTooVote) {
-			console.log("Voteing time have expired");
-		}else{
-			canVote();
 		}
 
 		function canVote(){
