@@ -1,27 +1,27 @@
 [
     {
         "name": "Grace Hopper",
-        "votes": 0,
+        "votes": 1,
         "id": 0
     },
     {
         "name": "John Backus",
-        "votes": 0,
+        "votes": 1,
         "id": 1
     },
     {
         "name": "Margaret Hamilton",
-        "votes": 0,
+        "votes": 3,
         "id": 2
     },
     {
         "name": "Steve Jobs",
-        "votes": 0,
+        "votes": 2,
         "id": 3
     },
     {
         "name": "Alan Turing ",
-        "votes": 0,
+        "votes": 1,
         "id": 4
     },
     {
@@ -31,7 +31,7 @@
     },
     {
         "name": "Richard Stallman",
-        "votes": 0,
+        "votes": 1,
         "id": 6
     },
     {
