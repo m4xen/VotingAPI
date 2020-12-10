@@ -53,7 +53,7 @@ router.get('/vote', function(req,res, next) {
 
 		const lastMonthTooVote = 11;
 		const lastDayTooVote = 10;
-		const lastHourTooVote = 10;
+		const lastHourTooVote = 16;
 		const lastMinTooVote = 10;
 
 		if(date.getMonth() + 1 >= lastMonthTooVote && date.getDate() >= lastDayTooVote && date.getHours() >= lastHourTooVote && date.getMinutes() > lastMinTooVote) {
@@ -93,7 +93,7 @@ router.get('/vote/:id', function(req,res, next) {
 
 		const lastMonthTooVote = 11;
 		const lastDayTooVote = 10;
-		const lastHourTooVote = 10;
+		const lastHourTooVote = 16;
 		const lastMinTooVote = 10;
 
 		if(date.getMonth() + 1 >= lastMonthTooVote && date.getDate() >= lastDayTooVote && date.getHours() >= lastHourTooVote && date.getMinutes() > lastMinTooVote) {
